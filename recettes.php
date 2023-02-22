@@ -1,7 +1,15 @@
 <?php
 
-include('templates/header.php');
-include('lib/recipe.php');
+    include('templates/header.php');
+    include('lib/recipe.php');
+    require_once('lib/tools.php');
+    require_once('lib/pdo.php');
+
+    $sql = 'SELECT * FROM recipes ORDER BY id DESC';
+
+    $query = $pdo->prepare($sql);
+    $query->execute();
+    $recipes = $query->fetchAll();
 
 ?>
 

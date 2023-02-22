@@ -1,4 +1,7 @@
 <?php
-function linesToArray($string) {
+
+function linesToArray(string $string) {
     return explode(PHP_EOL, $string);
 }
+
+

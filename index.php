@@ -2,6 +2,7 @@
 
     include('templates/header.php');
     include('lib/recipe.php');
+    require_once('lib/tools.php');
 
 ?>
 

@@ -25,7 +25,6 @@
 <!-- Recipes -->
 
     <div class="row">
-
         <?php
             foreach ($recipes as $key => $recipe) {
                 include('templates/recipe_partial.php');

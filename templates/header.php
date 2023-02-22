@@ -5,10 +5,7 @@
     
     $currentPage = basename($_SERVER['SCRIPT_NAME']);
 
-    $mainMenu = [
-        'index.php' => 'Accueil',
-        'recettes.php' => 'Recettes'
-    ];
+    
     
 
 ?>

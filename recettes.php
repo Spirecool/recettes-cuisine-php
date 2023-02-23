@@ -1,15 +1,11 @@
 <?php
 
-    include('templates/header.php');
-    include('lib/recipe.php');
+    require_once('templates/header.php');
+    require_once('lib/recipe.php');
     require_once('lib/tools.php');
-    require_once('lib/pdo.php');
+    // require_once('lib/pdo.php');
 
-    $sql = 'SELECT * FROM recipes ORDER BY id DESC';
-
-    $query = $pdo->prepare($sql);
-    $query->execute();
-    $recipes = $query->fetchAll();
+    $recipes = getRecipes($pdo);
 
 ?>
 
@@ -24,7 +20,6 @@
 <!-- Recipes -->
 
 <div class="row">
-
     <?php
     foreach ($recipes as $key => $recipe) {
         include('templates/recipe_partial.php');
